@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { router } from 'expo-router';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth, db } from '../../firebaseConfig'; // Asegúrate que esta ruta sea correcta
-import { doc, setDoc } from 'firebase/firestore';
+import { registerWithEmail } from '../auth/registerWithEmail'; // Asegúrate que esta ruta sea correcta
 
 export default function RegistroScreen() {
   const [correo, setCorreo] = useState('');
@@ -11,14 +9,7 @@ export default function RegistroScreen() {
 
   const registrarUsuario = async () => {
     try {
-      const credenciales = await createUserWithEmailAndPassword(auth, correo, contrasena);
-
-      // Guardar datos básicos del usuario en Firestore
-      await setDoc(doc(db, 'usuarios', credenciales.user.uid), {
-        correo: correo,
-        creadoEn: new Date(),
-      });
-
+      await registerWithEmail(correo, contrasena);
       Alert.alert('Registro exitoso', '¡Bienvenido a MuéveloRD!');
       router.replace('/(tabs)/principal/page');
     } catch (error: any) {

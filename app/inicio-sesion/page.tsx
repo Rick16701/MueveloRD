@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import { router } from 'expo-router';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebaseConfig'; // Asegúrate que la ruta sea correcta
+import { useRouter } from 'expo-router';
+import { loginConEmail } from '../auth/loginConEmail'; // Asegúrate de que esta ruta sea correcta
 
 export default function InicioSesionScreen() {
+  const router = useRouter();
   const [correo, setCorreo] = useState('');
   const [contrasena, setContrasena] = useState('');
 
   const iniciarSesion = async () => {
     try {
-      await signInWithEmailAndPassword(auth, correo, contrasena);
-      router.replace('/(tabs)/principal/page'); // Redirige a la pantalla principal
+      await loginConEmail(correo, contrasena);
+      router.replace('/(tabs)/principal/page'); // Redirige a pantalla principal
     } catch (error: any) {
       Alert.alert('Error de autenticación', error.message);
     }

@@ -7,8 +7,11 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { useProtectedRoute } from '../auth/useProtectedRoute'; // 🔒 Importación agregada
 
 export default function TabLayout() {
+  useProtectedRoute(); // 🔒 Protección ejecutada antes de renderizar Tabs
+
   const colorScheme = useColorScheme();
 
   return (
@@ -20,12 +23,12 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
           },
           default: {},
         }),
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
