@@ -18,7 +18,8 @@ Este repositorio contiene el desarrollo del prototipo inicial de la aplicación 
 | `README.auth.md`                    | Documentación específica del branch `auth-development`                    |
 | `README.ui.md`                      | Documentación específica del branch `ui-development`                      |
 | `README.figma-wireframes.md`        | Documentación del branch con mockups y link de Figma                      |
-| `README.visual-layout-implementation.md` | Documentación del branch con implementación visual de las pantallas  |
+| `README.visual-layout-implementation.md` | Documentación del branch con implementación visual de pantallas   |
+| `README.componentes-base.md`        | Documentación del branch `componentes-base` con todos los componentes UI  |
 | `MueveloRD - Reporte.pdf`           | Documento oficial del proyecto (reporte)                                  |
 | `MueveloRD Presentacion.pptx`       | Presentación del prototipo inicial para el jurado                         |
 | `package.json`                      | Dependencias y configuración del entorno Expo y React Native              |
@@ -34,31 +35,33 @@ Este repositorio contiene el desarrollo del prototipo inicial de la aplicación 
 * [x] Prueba funcional de lectura de datos desde Firestore
 * [x] Mockups en Figma finalizados y subidos (branch `figma-wireframes`)
 * [x] Implementación visual iniciada (branch `visual-layout-implementation`)
-* [x] Documentación completa por branch (`auth`, `ui`, `figma`, `visual-layout`)
+* [x] Componentes base reutilizables implementados (branch `componentes-base`)
+* [x] Documentación completa por branch (`auth`, `ui`, `figma`, `visual-layout`, `componentes-base`)
 
 ---
 
 ## 🛠️ Branches trabajados
 
-| Branch                            | Descripción                                                               |
-|----------------------------------|---------------------------------------------------------------------------|
-| `main`                           | Versión estable y documentación oficial                                   |
-| `ui-development`                 | Desarrollo de pantallas base del prototipo inicial                        |
-| `auth-development`               | Flujo completo de autenticación (login, registro, protección de rutas)    |
-| `figma-wireframes`               | Mockups entregados por Franibel y enlace a Figma                          |
-| `visual-layout-implementation`   | Implementación visual de pantallas con base en los diseños de Figma       |
+| Branch                      | Descripción                                                                 |
+|----------------------------|------------------------------------------------------------------------------|
+| `main`                     | Versión estable y documentación oficial                                      |
+| `ui-development`           | Desarrollo de pantallas base del prototipo inicial                           |
+| `auth-development`         | Flujo completo de autenticación (login, registro, protección de rutas)       |
+| `figma-wireframes`         | Mockups entregados por Franibel y enlace a Figma                             |
+| `visual-layout-implementation` | Implementación visual de pantallas con base en los diseños de Figma       |
+| `componentes-base`         | Componentes reutilizables en React Native para navegación e interfaz visual |
 
 ---
 
 ## 📌 Paso 2 – Diseño de la Interfaz (Wireframes y Layouts)
 
-| Tarea                                                                 | Responsable         | Estado      |
-|-----------------------------------------------------------------------|---------------------|-------------|
-| 5. Diseñar wireframes en Figma o a mano                               | Franibel Montero    | ✅ Listo     |
-| 6. Crear componentes base en React Native                             | Ricardo Ruiz        | ⏳ Próximo   |
-| 7. Implementar diseño de bienvenida y login visuales                  | Franibel Montero    | 🔄 En curso  |
-| 8. Implementar pantalla de menú principal visual                      | Ricardo Ruiz        | ⏳ Próximo   |
-| 9. Implementar pantallas restantes (calificación, offline, turismo…)  | Franibel Montero    | ⏳ Próximo   |
+| Tarea                                                                  | Responsable         | Estado     |
+|------------------------------------------------------------------------|---------------------|------------|
+| 5. Diseñar wireframes en Figma o a mano                                | Franibel Montero    | ✅ Listo    |
+| 6. Crear componentes base en React Native                              | Ricardo Ruiz        | ✅ Listo    |
+| 7. Implementar diseño de bienvenida y login visuales                   | Franibel Montero    | 🔄 En curso |
+| 8. Implementar pantalla de menú principal visual                       | Ricardo Ruiz        | ⏳ Próximo  |
+| 9. Implementar pantallas restantes (calificación, offline, turismo…)   | Franibel Montero    | ⏳ Próximo  |
 
 ---
 
